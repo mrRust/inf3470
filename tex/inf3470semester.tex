@@ -1,0 +1,55 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\pagestyle{headings}
+\usepackage{listings}
+
+\begin{document}
+\lstset{language=Java} 
+\title{INF3470 - Digital signalbehandling \\ Høst 2015 - Semester}
+\author{Hans Rusten}
+\date{\today}
+\maketitle
+
+\section{Om faget}
+
+
+Signalbehandling kan defineres som det matematiske verktøyet som brukes for å analysere, modellere og utføre operasjoner på fysiske signaler og deres kilder. I digital signalbehandling anvendes verktøyene på signaler slik de er representert i en datamaskin. Signalbehandling står sentralt i en rekke anvendelser innenfor bl.a.: trådløse kommunikasjonssystemer (mobiltelefoner og WLAN), medisin (ultralyd), seismikk, sonar, multimedia (f.eks. MP3), måleteknikk, og fjernanalyse.
+
+Emnet behandler følgende tema: Analoge og digitale signaler og systemer i tids- og frekvensrommet, sampling og Z-transform, frekvenstransformasjoner og Fast Fourier-transform, og filtrering, FIR og IIR filtre.\\
+
+
+Målet med kurset er at studentene skal:
+\begin{itemize}
+
+\item Lære å beherske basismetodene for behandling av både analoge og diskrete/digitale signaler og systemer.
+\item Opparbeide en god teoretisk forståelse for representasjon av signaler i tids- og frekvensdomenet.
+\item Kjenne til hvordan gjennomgått teori anvendes i viktige systemer som mobiltelefoner, lydkompresjon og avbildningssystemer.
+\item Få en god bakgrunn for videre studier i signalbehandling.
+\end{itemize}
+
+\section{Komplese tall}
+$$e^{j\phi} = cos(\phi) + sin(\phi)$$
+Ut  ifra dette kan vi utlede eulers idenitet lett:
+$$(e^{j\lambda}+e^{-j\lambda})/2 = cos(\lambda)$$ 
+$$(e^{j\lambda}-e^{-j\lambda})/2 = j*sin(\lambda)$$ 
+Generell tidsavhenning funksjon:
+$$Acos(2\pi ft+\phi) = \frac{A(e^{j\pi ft}e^{j\phi}+e^{-j\pi ft}e^{-j\phi})}{2}$$
+En cosinus med frekvens $f$ og fase $\phi$ kan tolkes
+som summen av to komplekse eksponentiale.\\
+Modulasjon:
+$$cos(\phi_1)cos(\phi_2) = \frac{cos(\phi_1 + \phi_2) + cos(\phi_1 - \phi_2)}{2} $$
+Geometriske rekker: 
+\section{Diskret signaler og systemer}
+Begreper: Left-side, Right-side, causal, anti-causal, enhetspuls, enhets-stegfunksjon,
+\\
+Egenskaper ved impulsfunksjonen:
+$$x[n]\delta[n-k] = x[k]\delta[n-k] $$
+Impulsen er bare $1$ ved $k = 0$
+Tidsdiskrete sinuser:
+$$ (co)sinus x(t) = cos(2\pi ft) $$
+Samples ved $t_s$ der samplingsfrekvensen er $S = 1/{t_s}Hz$ dvs. $t = n*t_s$
+Gir diskret cosinus:
+$$ x[n] = cos(2\pi fnt_s) = cos(2\pi f/S) = cos(2\pi nF) $$
+4 frekvensbegreper: 
+\end{document}
